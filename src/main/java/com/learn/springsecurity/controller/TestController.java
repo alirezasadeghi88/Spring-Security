@@ -11,5 +11,8 @@ public class TestController {
         return "Public API";
     }
 
-
+    @GetMapping("/hello")
+    public String hello() {
+        return  "Hello Spring Security";
+    }
 }
