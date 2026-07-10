@@ -18,14 +18,12 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    public PasswordEncoder
-    passwordEncoder() {
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public UserDetailsService
-    userDetailsService() {
+    public UserDetailsService userDetailsService() {
         UserDetails userDetails = User.builder().username("ali")
                 .password(passwordEncoder().encode("1234")).roles("User").build();
 
